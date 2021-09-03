@@ -18,7 +18,7 @@ let x = { x: 2000 };
 let y = x; // xotiradagi manzili saqlanadi
 
 y.x = 30;
-console.log(x, y);
+// console.log(x, y);
 
 //Klonlash
 
@@ -54,6 +54,25 @@ const findUser2 = users.filter((user) => {
 const findUser3 = users.findIndex((user) => {
   return user.username === "user14" || user.password === "user3";
 });
-console.log(findUser3);
 
+const arr = [4, 3, 2];
+const arr2 = [1, 2, 6, 7];
+const arr3 = arr.concat(arr2);
+arr3.sort();
+arr3.reverse();
+// console.log(arr3);
+
+const arr4 = [
+  { username: "usmon" },
+  { username: "G`ulomjon" },
+  { username: "botir" },
+];
+// Sortingda birinchi bolib katta harflarni birinchiga chiqaradi
+arr4.sort((a, b) => {
+  const first = a.username.toLowerCase();
+  const second = b.username.toLowerCase();
+  if (first < second) return -1;
+  if (first > second) return 1;
+});
+console.log(arr4);
 for (let i = 0; i < Object.keys(person).length; i++) {}
